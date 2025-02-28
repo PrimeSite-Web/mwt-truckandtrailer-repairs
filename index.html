@@ -36,6 +36,10 @@
             color: white;
         }
 
+        nav {
+            display: flex;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
@@ -78,6 +82,7 @@
                 background: black;
                 width: 100%;
                 text-align: center;
+                z-index: 1000;
             }
 
             nav ul {
@@ -212,6 +217,18 @@
     </footer>
 
     <script>
+        // Mobile Menu Toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('nav').classList.remove('active');
+            });
+        });
+
         // Slideshow Functionality
         let slides = document.querySelectorAll('.slideshow img');
         let currentSlide = 0;
