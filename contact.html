@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - W.T.W Truck And Trailer Repairs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: url('https://trucksmag.co.za/wp-content/uploads/2023/11/022Actros-25-.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00AEEF;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: black;
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            nav.active {
+                display: block;
+            }
+        }
+
+        .contact-container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .contact-container h1 {
+            font-size: 48px;
+            color: #00AEEF;
+            margin-bottom: 20px;
+        }
+
+        .contact-container p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .contact-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 20px 40px;
+            background-color: #25D366;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            text-align: center;
+            width: 60%;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #1EBE5D;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #00AEEF;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #007bbd;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">W.T.W Truck And Trailer Repairs</div>
+        <button class="menu-toggle">&#9776;</button>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>Get in touch with us for the best truck and trailer repair services!</p>
+        
+        <!-- WhatsApp Button -->
+        <a href="https://wa.link/w7ky7j" class="contact-btn" target="_blank">WhatsApp Us</a>
+        
+        <!-- Back to Home Button linking to index.html -->
+        <a href="index.html" class="back-btn">Back to Home</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 W.T.W Truck And Trailer Repairs. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
