@@ -51,6 +51,48 @@
             color: #00AEEF;
         }
 
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: black;
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                font-size: 18px;
+            }
+
+            nav.active {
+                display: block;
+            }
+        }
+
         .container {
             max-width: 800px;
             margin: 100px auto 20px;
@@ -98,6 +140,7 @@
 
     <header>
         <div class="logo">W.T.W Truck And Trailer Repairs</div>
+        <button class="menu-toggle">&#9776;</button>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -128,6 +171,16 @@
     <footer>
         <p>&copy; 2025 W.T.W Truck And Trailer Repairs. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
